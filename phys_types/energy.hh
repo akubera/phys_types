@@ -1,5 +1,5 @@
 /**
- * \file phys_types/energy.hh
+ * \file energy.hh
  * \author Andrew Kubera
  * \date Aug 09, 2015
  */

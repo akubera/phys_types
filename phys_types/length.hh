@@ -1,7 +1,7 @@
 /**
- * \file physical_quantities/length.hxx
+ * \file length.hh
  * \author Andrew Kubera
- * \date Jul 14, 2015
+ * \date Aug 09, 2015
  */
 
 #pragma once
