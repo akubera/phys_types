@@ -7,9 +7,70 @@
 
 #pragma once
 
+#include "quantity.hh"
+
 #include <cmath>
 
 static const double DEGREES_TO_RADIANS = M_PI / 180.0;
+
+class Angle : public Quantity<float> {
+public:
+  struct Units {
+    friend class Angle;
+    static constexpr const Units Radians() { return Units(1.0); };
+    static constexpr const Units Degrees() { return Units(DEGREES_TO_RADIANS); };
+
+    constexpr operator float() const { return factor; };
+  private:
+    constexpr Units(float x): factor(x) {};
+    float factor;
+  };
+
+  Angle() { };
+  constexpr Angle(float value, Units conversion):
+    Quantity<float>(value*conversion)
+  {}
+
+  float As(Angle::Units units) const {
+    return _value / units.factor;
+  }
+
+  float sin() const {
+    return ::sin(_value);
+  }
+
+  float cos() const {
+    return ::cos(_value);
+  }
+
+  float tan() const {
+    return ::tan(_value);
+  }
+
+  float asin() const {
+    return ::asin(_value);
+  }
+
+  float acos() const {
+    return ::acos(_value);
+  }
+
+  float atan() const {
+    return ::atan(_value);
+  }
+
+  float sec() const {
+    return 1/cos();
+  }
+
+  float csc() const {
+    return 1/sin();
+  }
+
+  float cot() const {
+    return cos()/sin();
+  }
+};
 
 class Degrees;
 
