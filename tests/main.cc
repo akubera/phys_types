@@ -6,6 +6,7 @@ using namespace bandit;
 #include "test_energy.h"
 #include "test_angle.h"
 #include "test_time.h"
+#include "test_speed.h"
 
 go_bandit([](){
   describe("Time.Units", test_time_units);
@@ -19,6 +20,9 @@ go_bandit([](){
 
   describe("Angle.Units", test_angle_units);
   describe("Angle", test_angle);
+
+  describe("Speed.Units", test_speed_units);
+  describe("Speed", test_speed);
 });
 
 
