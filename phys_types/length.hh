@@ -6,10 +6,10 @@
 
 #pragma once
 
-#include "quantity.hxx"
+#include "quantity.hh"
+#include "constants.hh"
 
 #include <cmath>
-#include "constants.hxx"
 
 /**
  * \class Length

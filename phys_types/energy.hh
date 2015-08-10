@@ -6,8 +6,8 @@
 
 #pragma once
 
-#include "quantity.hxx"
-#include "constants.hxx"
+#include "quantity.hh"
+#include "constants.hh"
 
 #include <cmath>
 
