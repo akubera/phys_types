@@ -106,7 +106,7 @@ inline Radians::Radians(const Degrees& angle):
 inline Degrees::Degrees(const Radians& angle):
   _value(angle.getValue() / DEGREES_TO_RADIANS) {}
 
-inline Radians operator"" _rad(long double r) { return Radians(r); }
-inline Radians operator"" _rad(unsigned long long r) { return Radians(r); }
-inline Degrees operator"" _deg(long double d) { return Degrees(d); }
-inline Degrees operator"" _deg(unsigned long long d) { return Degrees(d); }
+inline Angle operator"" _rad(long double r) { return Angle(r, Angle::Units::Radians()); }
+inline Angle operator"" _rad(unsigned long long r) { return Angle(r, Angle::Units::Radians()); }
+inline Angle operator"" _deg(long double d) { return Angle(d, Angle::Units::Degrees()); }
+inline Angle operator"" _deg(unsigned long long d) { return Angle(d, Angle::Units::Degrees()); }
